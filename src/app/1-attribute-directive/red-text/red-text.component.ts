@@ -9,16 +9,6 @@ export class RedTextComponent {
   public active : boolean = false;
   public activeStyle : boolean = false;
   
-  calculateStyles(): { [klass: string]: any; }|null|undefined {
-    if(this.activeStyle)
-    {
-      return { 'color': 'red' };
-    }
-    else
-    {
-      return { };
-    }
-  }
   toggleStyleFunc() {
     this.activeStyle = !this.activeStyle;
   }
