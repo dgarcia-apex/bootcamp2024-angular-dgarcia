@@ -1,1 +1,21 @@
-app html
+<div style="text-align:center">
+  <h2>
+    Final Exercise 1 Modules, Components, Routes
+  </h2>
+</div>
+<div style="text-align:center">
+  <button><a [routerLink]="['/']" routerLinkActive="router-link-active" >Main</a></button><span></span>
+</div>
+<div style="text-align:center">
+  <button><a [routerLink]="['a/a1']" routerLinkActive="router-link-active" >a1</a></button><span></span>
+  <button><a [routerLink]="['a/a2']" routerLinkActive="router-link-active" >a2</a></button><span></span>
+  <button><a [routerLink]="['a/a3']" routerLinkActive="router-link-active" >a3</a></button>
+</div>
+<div style="text-align:center">
+  <button><a [routerLink]="['b/b1']" routerLinkActive="router-link-active" >b1</a></button><span></span>
+  <button><a [routerLink]="['b/b2']" routerLinkActive="router-link-active" >b2</a></button><span></span>
+  <button><a [routerLink]="['b/b3']" routerLinkActive="router-link-active" >b3</a></button>
+</div>
+<ng-component *ngIf="router.url !='/'">
+  <router-outlet></router-outlet>
+</ng-component>
