@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RedTextComponent } from './1-attribute-directive/red-text/red-text.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RedTextComponent
   ],
   imports: [
     BrowserModule,
