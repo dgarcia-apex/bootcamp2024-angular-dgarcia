@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row list-group-item-primary">
+        <div class="col text-center fw-bold">
+            {{ productItem.id }} {{ productItem.title }}
+        </div>
+        <div class="col">
+            <div class="row justify-content-md-center list-group-item-primary">
+                <div class="col text-center">
+                    {{ productItem.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-bottom-row">
+    <div class="row my-top-row list-group-item-secondary">
+        <div class="col-sm">
+            <app-images-grid [itemPhotos]="productItem.photos" [firstPage]="this.firstPage" ></app-images-grid>
+        </div>
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm">
+                    <span>
+                        Prices:
+                    </span>
+                    <ul *ngFor="let item of productItem.prices | keyvalue">
+                        <li *ngIf="productItem.offerDiscount; else noDiscounts">
+                            {{item.key}} <br>
+                            After:
+                            <span style="text-decoration-line: line-through">
+                                {{item.value | myRound | currency}}
+                            </span> Now:
+                            <span>
+                                {{item.value | discount : productItem.offerDiscount | myRound | currency}}
+                            </span>
+                        </li>
+                        <ng-template #noDiscounts>
+                            {{item.key}} {{item.value | myRound | currency}} 
+                        </ng-template>
+                    </ul>
+                </div>
+                <div class="col-sm" *ngIf="productItem.offerDiscount">
+                    <div class="text-center" style="margin-top: 10%;">
+                        <span>Discount!!</span>
+                        <h2 style="color: red;">{{productItem.offerDiscount}}%</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm" *ngIf="firstPage">
+            <div class="text-center">
+                <button style="margin-top: 8%;"><a [href]="['/display/'+productItem.id]" routerLinkActive="router-link-active" >See Details</a></button>
+            </div>
+        </div>
+    </div>
+</div>
