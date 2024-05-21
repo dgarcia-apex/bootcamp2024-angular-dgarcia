@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CustomDirectiveComponent } from './3-custom-directive/custom-directive/custom-directive.component';
-import { CustomDirective } from './3-custom-directive/custom.directive';
+import { CapitalizeDirective } from './3-custom-directive/capitalize.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomDirectiveComponent,
-    CustomDirective,
+    CapitalizeDirective,
   ],
   imports: [
     BrowserModule,
