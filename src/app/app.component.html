@@ -1,1 +1,21 @@
-app html
+<!-- ••[1]••••••••••••••••••••••••• app.component.html •••••••••••••••••••••••••••••• -->
+
+<div class="app-root pb-5">
+  <mat-toolbar color="primary">
+    <mat-icon class="mr-4" color="accent">view_list</mat-icon>
+    <span class="flex-1 text-sm sm:text-lg">{{ titleLabel }}</span>
+    <mat-slide-toggle
+      color="primary"
+      checked
+      hideIcon
+      labelPosition="before"
+      (change)="themeChangeHandler($event)"
+    >
+      <span class="text-color-invert text-xs sm:text-sm">
+        {{ themeToggleLabel }}
+      </span>
+    </mat-slide-toggle>
+  </mat-toolbar>
+
+  <app-resume-form />
+</div>
