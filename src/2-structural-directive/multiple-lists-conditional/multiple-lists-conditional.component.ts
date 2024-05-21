@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './multiple-lists-conditional.component.scss'
 })
 export class MultipleListsConditionalComponent {
-  public myArray: Array<string> = ["A", "B", "C"];
+  public letters: Array<string> = ["A", "B", "C"];
 }

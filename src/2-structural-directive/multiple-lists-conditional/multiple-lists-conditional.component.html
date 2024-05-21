@@ -3,7 +3,7 @@
     <div class="row row-cols-auto">
         <div class="col">
             <ul>
-                <li *ngFor="let item of myArray">
+                <li *ngFor="let item of letters">
                     {{item}}
                 </li>
             </ul>
@@ -16,7 +16,7 @@
     <div class="row row-cols-auto">
         <div class="col">
             <ul>
-                <ng-container *ngFor="let item of myArray">
+                <ng-container *ngFor="let item of letters">
                 <li *ngIf="item == 'B'">
                     {{item}}
                 </li>
@@ -31,7 +31,7 @@
     <div class="row row-cols-auto">
         <div class="col">
             <ul>
-                <ng-container *ngFor="let item of myArray">
+                <ng-container *ngFor="let item of letters">
                     <ng-container [ngSwitch]="item">
                         <li *ngSwitchCase="'A'">1</li>
                         <li *ngSwitchCase="'B'">2</li>
