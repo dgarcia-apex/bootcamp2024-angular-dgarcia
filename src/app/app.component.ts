@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'bootcamp2024-angular-dgarcia';
+  title = 'bootcamp2024-angular-apex-dagg-final-modules-no-sa2';
+
+  constructor(public router: Router) { }
 }
