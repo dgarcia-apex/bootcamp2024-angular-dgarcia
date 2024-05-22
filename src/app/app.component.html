@@ -1,1 +1,28 @@
-app html
+<div class="container">
+    <div class="row justify-content-md-center list-group-item-primary">
+      <div class="col text-center">
+        <h1>bootcamp 2024 angular apex dagg homeworks</h1>
+        <br>
+      </div>
+    </div>
+
+<div class="row justify-content-md-center list-group-item-success">
+    <div class="col"></div>
+    <div class="col">
+      <br>
+      <br>
+      <h2>5.- Modules</h2>
+      <br>
+        <div class="header-nav">
+          <a routerLink="first" routerLinkActive="active" class="nav-link"><span class="nav-text">Main</span></a>
+          <a routerLink="second" routerLinkActive="active" class="nav-link"><span class="nav-text">Second</span></a>
+      </div>
+      <br>
+      <ng-component *ngIf="router.url !== '/'">
+        <router-outlet></router-outlet>
+      </ng-component>
+    </div>
+    <div class="col"></div>
+  </div>
+  
+</div>
