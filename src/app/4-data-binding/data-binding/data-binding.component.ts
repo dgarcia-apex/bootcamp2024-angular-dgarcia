@@ -6,12 +6,13 @@ import { NgForm } from '@angular/forms';
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.scss'
 })
+
 export class DataBindingComponent {
-oneWayText: string="";
-twoWaysText: string="";
+  oneWayText: string = "";
+  twoWaysText: string = "";
 
 clickMe() {
-  alert("I Was Triggered by an Event")
+  alert("I Was Triggered by an Event");
 }
 
 ngAfterContentInit(): void {
@@ -20,7 +21,7 @@ ngAfterContentInit(): void {
 
 twoWaysChangeText($event: Event) {
   let htmlElement = $event.target as HTMLInputElement;
-  this.twoWaysText = htmlElement.value||"";
+  this.twoWaysText = htmlElement.value || "";
   }
 
 }
