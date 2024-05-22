@@ -7,13 +7,13 @@ import { Injectable1Service } from '../injectable1.service';
   styleUrl: './my-injectable.component.scss',
 })
 export class MyInjectableComponent {
-  myComponentVar: string = "";
+  title: string = "";
   constructor(private service1:Injectable1Service){
 
   }
 
-  ngAfterContentInit()
+  ngOnInit()
   {
-    this.myComponentVar = this.service1.getMyVar();
+    this.title = this.service1.getMyVar();
   }
 }
