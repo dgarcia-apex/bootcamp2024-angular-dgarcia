@@ -20,7 +20,7 @@ ngAfterContentInit(): void {
 }
 
 twoWaysChangeText($event: Event) {
-  let htmlElement = $event.target as HTMLInputElement;
+  const htmlElement = $event.target as HTMLInputElement;
   this.twoWaysText = htmlElement.value || "";
   }
 
