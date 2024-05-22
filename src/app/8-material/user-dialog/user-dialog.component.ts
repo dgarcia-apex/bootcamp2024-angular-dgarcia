@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { User } from '../material/material.component';
+import { IUser } from '../material/material.component';
 import {
   MAT_DIALOG_DATA,
   MatDialogRef,
@@ -14,7 +14,7 @@ import {
 export class UserDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<UserDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: User,
+    @Inject(MAT_DIALOG_DATA) public data: IUser,
   ) { }
   onCancelUserDialog(): void {
     this.dialogRef.close();
