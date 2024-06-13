@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Injectable1Service {
-  private myVar: string ="";
+  private myComment: string = '';
   constructor() {
-    this.myVar = "One";
+    this.myComment = 'One';
   }
 
-  public getMyVar(): string {
-    return this.myVar;
+  public getMyComment(): string {
+    return this.myComment;
   }
 }
